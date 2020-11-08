@@ -61,7 +61,7 @@
 export default {
   name: 'header',
   created () {
-    // this.signedIn()
+    this.signedIn()
   },
   methods: {
     setError (error, text) {
