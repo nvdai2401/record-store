@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_07_080947) do
+ActiveRecord::Schema.define(version: 2020_11_08_031420) do
 
   create_table "artists", force: :cascade do |t|
     t.string "name"
-    t.integer "user_id", null: false
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_artists_on_user_id"
@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 2020_11_07_080947) do
   create_table "records", force: :cascade do |t|
     t.string "title"
     t.string "year"
-    t.integer "artist_id", null: false
-    t.integer "user_id", null: false
+    t.integer "artist_id"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["artist_id"], name: "index_records_on_artist_id"
