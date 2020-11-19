@@ -12,7 +12,7 @@
             v-model="email"
             class="input"
             id="email"
-            placeholder="andy@web-crunch.com"
+            placeholder="Email"
           />
         </div>
 
@@ -101,7 +101,7 @@ export default {
       delete localStorage.signedIn
     },
     checkSignedIn () {
-      if (!localStorage.signedIn) {
+      if (localStorage.signedIn) {
         this.$router.replace('/records')
       }
     }
